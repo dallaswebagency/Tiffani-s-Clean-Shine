@@ -76,34 +76,40 @@ nav.main > a:hover::after,.dd:hover > button::after{width:100%}
 .mnav{display:none}
 
 /* ---------- hero ---------- */
-.hero{background:var(--cream);position:relative;overflow:hidden;padding:70px 0 0}
-.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:end}
-.hero-copy{padding-bottom:90px}
-.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,6.4vw,92px);line-height:.98;letter-spacing:-.025em;margin:22px 0 28px}
+.hero{background:var(--cream);position:relative;overflow:hidden;padding:70px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.hero-copy{padding-bottom:10px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,6.2vw,90px);line-height:.98;letter-spacing:-.025em;margin:22px 0 28px}
 .hero h1 em{font-style:italic;color:var(--coral)}
 .tagline{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;font-family:var(--serif);font-size:clamp(24px,2.6vw,34px);line-height:1.1}
 .tagline span:last-child{font-style:italic;position:relative}
 .tagline span:last-child::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:8px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 8' preserveAspectRatio='none'%3E%3Cpath d='M1 6 C30 1 70 1 119 4' stroke='%23FC613A' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;background-size:100% 100%}
 .hero-sub{max-width:470px;color:var(--slate);margin:34px 0 36px;font-size:18px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.hero-visual{position:relative;height:640px}
-.hero-photo{position:absolute;inset:0 0 0 0;clip-path:polygon(0 0,82% 0,100% 13%,100% 100%,0 100%);overflow:hidden}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:28% center;transform:scale(1.06);animation:slowzoom 14s ease-out forwards}
+.hero-visual{position:relative;height:620px}
+.hv-block{position:absolute;top:0;right:0;width:58%;height:64%;background:var(--coral);border-radius:6px}
+.hv-block::after{content:"";position:absolute;inset:18px;border:1.5px dashed rgba(255,255,255,.45);border-radius:3px}
+.hv-dots{position:absolute;left:8px;top:30px;width:120px;height:120px;background-image:radial-gradient(var(--ink) 1.6px,transparent 1.6px);background-size:16px 16px;opacity:.22}
+.hv-main{position:absolute;top:44px;right:36px;left:56px;bottom:70px;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px rgba(27,33,48,.22)}
+.hv-main img{width:100%;height:100%;object-fit:cover;object-position:40% center;transform:scale(1.07);animation:slowzoom 14s ease-out forwards}
 @keyframes slowzoom{to{transform:scale(1)}}
-.badge{position:absolute;left:-62px;top:70px;width:150px;height:150px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;z-index:3;box-shadow:0 18px 40px rgba(252,97,58,.35)}
+.hv-inset{position:absolute;left:0;bottom:0;width:190px;height:236px;border-radius:16px;overflow:hidden;border:8px solid var(--cream);box-shadow:0 20px 44px rgba(27,33,48,.25);z-index:3}
+.hv-inset img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;right:-18px;top:-26px;width:140px;height:140px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;z-index:4;box-shadow:0 18px 40px rgba(27,33,48,.3)}
 .badge svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 22s linear infinite}
 .badge svg text{font:600 11.5px var(--sans);letter-spacing:1px;fill:#fff;text-transform:uppercase}
-.badge .n{font-family:var(--serif);font-size:46px;line-height:.9;text-align:center}
-.badge .n small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-top:4px}
+.badge .n{font-family:var(--serif);font-size:44px;line-height:.9;text-align:center;color:var(--coral)}
+.badge .n small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-top:4px;color:#fff}
 @keyframes spin{to{transform:rotate(360deg)}}
-.hero-note{position:absolute;right:28px;bottom:28px;background:var(--paper);max-width:300px;padding:20px 22px;border-radius:4px;z-index:3;box-shadow:0 20px 50px rgba(27,33,48,.18);border-left:3px solid var(--coral)}
-.hero-note p{font-family:var(--serif);font-size:18px;line-height:1.35;font-style:italic}
-.hero-note span{display:block;margin-top:10px;font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--slate)}
+.hero-note{position:absolute;right:0;bottom:16px;background:var(--paper);max-width:290px;padding:18px 22px;border-radius:12px;z-index:3;box-shadow:0 20px 50px rgba(27,33,48,.18);display:flex;gap:14px;align-items:flex-start}
+.hero-note .stars{color:var(--coral);font-size:15px;letter-spacing:2px;line-height:1}
+.hero-note p{font-family:var(--serif);font-size:17.5px;line-height:1.35;font-style:italic;margin-top:8px}
+.hero-note span{display:block;margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:.08em;color:var(--slate)}
 
 /* ---------- intro / 25 ---------- */
 .intro{padding:130px 0 120px;background:var(--paper)}
 .intro-grid{display:grid;grid-template-columns:auto 1fr;gap:70px;align-items:center}
-.big25{font-family:var(--serif);font-size:clamp(170px,22vw,320px);line-height:.75;font-weight:500;color:transparent;-webkit-text-stroke:1.5px var(--ink);letter-spacing:-.04em;position:relative;display:inline-block}
+.big25{font-family:var(--serif);font-size:clamp(170px,22vw,320px);line-height:.75;font-weight:500;color:transparent;-webkit-text-stroke:1.5px var(--ink);letter-spacing:-.04em;position:relative;display:inline-block;justify-self:start}
 .big25 i{position:absolute;right:-6px;top:-8px;width:26px;height:26px}
 .intro h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.6vw,50px);line-height:1.1;letter-spacing:-.015em;max-width:640px}
 .intro h2 em{color:var(--coral)}
@@ -129,20 +135,27 @@ nav.main > a:hover::after,.dd:hover > button::after{width:100%}
 .sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.2vw,60px);line-height:1.02;letter-spacing:-.02em;margin-top:16px}
 .sec-head h2 em{color:var(--coral)}
 .sec-head p{max-width:360px;color:var(--slate)}
-.panels{display:flex;gap:14px;height:540px}
-.panel{position:relative;flex:1;border-radius:6px;overflow:hidden;cursor:pointer;transition:flex .6s cubic-bezier(.6,.05,.25,1);color:#fff;min-width:0}
-.panel.on{flex:2.6}
-.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
-.panel:hover img{transform:scale(1.04)}
-.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,33,48,.05) 30%,rgba(27,33,48,.85))}
-.panel-in{position:absolute;inset:auto 0 0 0;padding:30px;z-index:2}
-.panel .num{position:absolute;top:24px;left:28px;z-index:2;font-family:var(--serif);font-size:20px;font-style:italic}
-.panel h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.05;white-space:nowrap}
-.panel .more{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-weight:600;font-size:15px;background:var(--coral);padding:11px 20px;border-radius:999px;opacity:0;transform:translateY(10px);transition:.35s .15s}
-.panel.on .more{opacity:1;transform:none}
-.panel .more svg{width:16px;height:16px}
-.panel:not(.on) h3{writing-mode:vertical-rl;transform:rotate(180deg);position:absolute;bottom:30px;left:26px}
-.panel:not(.on) .panel-in{inset:0}
+.services{position:relative;overflow:hidden}
+.services::before{content:"Clean & Shine";position:absolute;left:50%;bottom:-0.18em;transform:translateX(-50%);font-family:var(--serif);font-style:italic;font-size:clamp(90px,15vw,230px);white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(27,33,48,.09);pointer-events:none;line-height:1}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;position:relative;align-items:start}
+.svc{display:block}
+.svc:nth-child(2){margin-top:110px}
+.svc:nth-child(3){margin-top:48px}
+.svc-media{position:relative}
+.svc-img{aspect-ratio:3/4;overflow:hidden;border-radius:16px;clip-path:polygon(0 0,100% 0,100% calc(100% - 74px),calc(100% - 74px) 100%,0 100%)}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.svc-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(27,33,48,.55));opacity:.7;transition:.4s}
+.svc:hover .svc-img img{transform:scale(1.06)}
+.svc:hover .svc-img::after{opacity:1}
+.svc-num{position:absolute;top:18px;left:18px;z-index:2;background:var(--paper);color:var(--ink);font-family:var(--serif);font-style:italic;font-size:17px;padding:6px 14px;border-radius:999px}
+.svc-go{position:absolute;right:0;bottom:0;width:62px;height:62px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;transition:.35s;box-shadow:0 12px 28px rgba(252,97,58,.35)}
+.svc-go svg{width:22px;height:22px;transition:.35s}
+.svc:hover .svc-go{background:var(--ink)}
+.svc:hover .svc-go svg{transform:rotate(-45deg)}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.3vw,32px);line-height:1.08;letter-spacing:-.01em;margin:24px 0 10px}
+.svc-link{font-weight:600;font-size:15px;color:var(--coral-dk);display:inline-flex;gap:8px;align-items:center;border-bottom:1.5px solid currentColor;padding-bottom:2px}
+.svc-cta{margin-top:70px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;position:relative;font-family:var(--serif);font-size:22px}
+.svc-cta em{color:var(--coral)}
 
 /* ---------- testimonials ---------- */
 .words{padding:130px 0;background:var(--paper)}
@@ -232,6 +245,8 @@ footer.site .logo-txt small{color:#8C92A0}
 
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc:nth-child(3){margin-top:-60px}
   nav.main,.head-cta .ph{display:none}
   .burger{display:flex}
   .mnav{position:fixed;inset:0;background:var(--ink);color:#fff;z-index:60;padding:30px;flex-direction:column;gap:6px}
@@ -241,9 +256,9 @@ footer.site .logo-txt small{color:#8C92A0}
   .mnav button{align-self:flex-end;background:none;border:0;color:#fff;font-size:36px;cursor:pointer;line-height:1}
   .hero-grid,.biz-grid,.words-grid,.why-grid,.cta-grid{grid-template-columns:1fr}
   .hero-copy{padding-bottom:20px}
-  .hero-visual{height:480px;margin:0 -28px}
-  .badge{left:28px;top:-40px;width:126px;height:126px}
-  .badge .n{font-size:38px}
+  .hero-visual{height:520px;margin-top:20px}
+  .badge{right:0;top:-30px;width:120px;height:120px}
+  .badge .n{font-size:36px}
   .intro-grid{grid-template-columns:1fr;gap:30px}
   .biz-img{min-height:380px}
   .biz-img::after{background:linear-gradient(180deg,transparent 60%,var(--ink))}
@@ -262,17 +277,17 @@ footer.site .logo-txt small{color:#8C92A0}
   .logo-mark{width:36px;height:36px}
   .head-cta .btn{display:none}
   .hero{padding-top:46px}
-  .hero-visual{height:400px}
-  .hero-note{left:20px;right:20px;bottom:20px;max-width:none}
+  .hero-visual{height:430px}
   .intro,.services,.words,.why,.cta{padding:84px 0}
   .sec-head{flex-direction:column;align-items:start}
-  .panels{flex-direction:column;height:auto}
-  .panel,.panel.on{flex:none;height:300px}
-  .panel:not(.on) h3{writing-mode:horizontal-tb;transform:none;position:static}
-  .panel:not(.on) .panel-in{inset:auto 0 0 0}
-  .panel .more{opacity:1;transform:none}
-  .panel h3{white-space:normal;font-size:27px}
-  .quote-stage{padding:60px 28px 120px}
+  .svc-grid{grid-template-columns:1fr;gap:54px}
+  .svc:nth-child(2),.svc:nth-child(3){margin-top:0}
+  .svc-img{aspect-ratio:4/4.4}
+  .hv-main{left:20px;right:10px;bottom:60px}
+  .hv-inset{width:130px;height:160px;bottom:0}
+  .hero-note{left:auto;right:0;bottom:0;max-width:220px;padding:14px 16px}
+  .hero-note p{font-size:15px}
+  .quote-stage{padding:60px 28px 50px}
   .q-photo{width:130px;height:130px;right:16px;bottom:-30px}
   .why-item{grid-template-columns:44px 1fr}
   .why-item h3{font-size:26px}
@@ -352,14 +367,16 @@ footer.site .logo-txt small{color:#8C92A0}
       </div>
     </div>
     <div class="hero-visual">
+      <div class="hv-block" aria-hidden="true"></div>
+      <div class="hv-dots" aria-hidden="true"></div>
+      <div class="hv-main"><img src="images/hero-janitorial-corridor.jpg" alt="Commercial cleaner pushing a janitorial cart through a Calgary office corridor"></div>
+      <div class="hv-inset"><img src="images/cleaning-supplies.jpg" alt="Cleaning caddies stocked with spray bottles"></div>
       <div class="badge" aria-hidden="true">
         <svg viewBox="0 0 150 150"><defs><path id="circ" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#circ" textLength="358" lengthAdjust="spacing">We Clean &#8226; You Shine &#8226; We Clean &#8226; You Shine &#8226;</textPath></text></svg>
         <div class="n">25<small>Years</small></div>
       </div>
-      <div class="hero-photo"><img src="images/hero-janitorial-corridor.jpg" alt="Commercial cleaner with a janitorial cart in a bright office corridor"></div>
       <div class="hero-note">
-        <p>"Armando and his team have been with us for 12 years."</p>
-        <span>TOURISM CALGARY</span>
+        <div><p>"Armando and his team have been with us for 12 years."</p><span>TOURISM CALGARY</span></div>
       </div>
     </div>
   </div>
@@ -380,7 +397,7 @@ footer.site .logo-txt small{color:#8C92A0}
 <!-- your business too -->
 <section class="biz">
   <div class="biz-grid">
-    <div class="biz-img"><img src="images/office-corridor.jpg" alt="Clean modern office hallway with glass partitions" loading="lazy"></div>
+    <div class="biz-img"><img src="images/calgary-office-dusk.jpg" alt="Clean open-plan Calgary office at dusk with the Calgary Tower in view" loading="lazy"></div>
     <div class="biz-copy rv">
       <span class="eyebrow">Cleaning is our business</span>
       <h2>But it's <em>your business</em> too.</h2>
@@ -400,23 +417,21 @@ footer.site .logo-txt small{color:#8C92A0}
       </div>
       <p>Commercial janitorial and maintenance, move in/move out cleaning and professional carpet cleaning across Calgary.</p>
     </div>
-    <div class="panels rv">
-      <a class="panel on" href="https://tiffaniscleaning.com/cleaning-maintenance">
-        <img src="images/cleaning-maintenance.jpg" alt="Gloved hands wiping and disinfecting an office desk" loading="lazy">
-        <span class="num">01</span>
-        <div class="panel-in"><h3>Cleaning &amp; Maintenance</h3><span class="more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    <div class="svc-grid">
+      <a class="svc rv" href="https://tiffaniscleaning.com/cleaning-maintenance">
+        <div class="svc-media"><div class="svc-img"><img src="images/cleaning-maintenance.jpg" alt="Cleaner in blue gloves wiping down an office desk" loading="lazy"></div><span class="svc-num">01</span><span class="svc-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <h3>Cleaning &amp; Maintenance</h3><span class="svc-link">Learn more</span>
       </a>
-      <a class="panel" href="https://tiffaniscleaning.com/services/move-in/out-cleaning">
-        <img src="images/move-in-out-cleaning.jpg" alt="Moving boxes in a bright room ready for move out cleaning" loading="lazy">
-        <span class="num">02</span>
-        <div class="panel-in"><h3>Move In/Move Out Cleaning</h3><span class="more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <a class="svc rv" href="https://tiffaniscleaning.com/services/move-in/out-cleaning">
+        <div class="svc-media"><div class="svc-img"><img src="images/move-in-out-cleaning.jpg" alt="Empty bright unit with gleaming hardwood floors after move out cleaning" loading="lazy"></div><span class="svc-num">02</span><span class="svc-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <h3>Move In/Move Out Cleaning</h3><span class="svc-link">Learn more</span>
       </a>
-      <a class="panel" href="https://tiffaniscleaning.com/services/carpet-cleaning">
-        <img src="images/carpet-cleaning.jpg" alt="Freshly cleaned office carpet behind glass doors" loading="lazy">
-        <span class="num">03</span>
-        <div class="panel-in"><h3>Professional Carpet Cleaning</h3><span class="more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      <a class="svc rv" href="https://tiffaniscleaning.com/services/carpet-cleaning">
+        <div class="svc-media"><div class="svc-img"><img src="images/carpet-cleaning.jpg" alt="Carpet extraction wand cleaning a commercial office carpet" loading="lazy"></div><span class="svc-num">03</span><span class="svc-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <h3>Professional Carpet Cleaning</h3><span class="svc-link">Learn more</span>
       </a>
     </div>
+    <div class="svc-cta rv"><span>We Clean. <em>You Shine.</em></span><a href="#quote" class="btn btn-coral">Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </div>
 </section>
 
@@ -437,7 +452,6 @@ footer.site .logo-txt small{color:#8C92A0}
       <blockquote class="q on"><p>Armando and his team have been with us for 12 years. Their service, reliability and costs have been outstanding and have met our expectations.</p><footer>Tourism Calgary</footer></blockquote>
       <blockquote class="q"><p>Thank you Tiffani's Clean and Shine for the hard work and dedication needed to keep our 95 year old building clean and bright. Seven plus years and we continue to really appreciate your efforts.</p><footer>Old Y Center Calgary</footer></blockquote>
       <blockquote class="q"><p>A wonderful group of people who have provided janitorial services to our company for over 3 years. In that time we have arrived to work on Monday mornings to a fresh office to begin the week. Garbage has been emptied, floors are sparkling and no dust to make us sneeze.</p><footer>Address Lighting</footer></blockquote>
-      <div class="q-photo"><img src="images/client-handshake.jpg" alt="Business handshake" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -448,7 +462,7 @@ footer.site .logo-txt small{color:#8C92A0}
     <div class="why-side">
       <span class="eyebrow">Why choose Tiffani's?</span>
       <h2>Six reasons offices <em>stay</em> with us</h2>
-      <div class="why-pic"><img src="images/cleaning-supplies.jpg" alt="Cleaning caddies stocked with spray bottles and supplies" loading="lazy"></div>
+      <div class="why-pic"><img src="images/client-handshake.jpg" alt="Business handshake" loading="lazy"></div>
     </div>
     <div class="why-list">
       <div class="why-item rv"><div><h3><svg viewBox="0 0 24 24"><path d="M12 3l2.4 5 5.6.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.6-.8z"/></svg>Expert Cleaning</h3><p>Our cleaners are highly trained and experienced to handle any mess with expertise and the right tools for the job.</p></div></div>
@@ -541,11 +555,6 @@ footer.site .logo-txt small{color:#8C92A0}
 </footer>
 
 <script>
-// services panels
-document.querySelectorAll('.panel').forEach(p=>{
-  p.addEventListener('mouseenter',()=>{if(innerWidth>760){document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));p.classList.add('on')}});
-  p.addEventListener('click',e=>{if(!p.classList.contains('on')){e.preventDefault();document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));p.classList.add('on')}});
-});
 // testimonials
 const cs=document.querySelectorAll('.client'),qs=document.querySelectorAll('.q');let qi=0,qt;
 function showQ(i){qi=i;cs.forEach((c,k)=>c.classList.toggle('on',k===i));qs.forEach((q,k)=>q.classList.toggle('on',k===i))}
